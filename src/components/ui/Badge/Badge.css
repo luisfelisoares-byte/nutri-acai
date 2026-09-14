@@ -1,0 +1,64 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  line-height: 1.2;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Variantes por Linha de Produto */
+.badge--food-service {
+  color: var(--line-food-service);
+  background-color: var(--line-food-service-bg);
+  border: 1px solid rgba(89, 28, 104, 0.25);
+}
+
+.badge--varejo {
+  color: var(--line-varejo);
+  background-color: var(--line-varejo-bg);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.badge--nutrinho {
+  color: var(--line-nutrinho);
+  background-color: var(--line-nutrinho-bg);
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+/* Variantes Gerais */
+.badge--neutral {
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-light);
+}
+
+.badge--primary {
+  color: var(--color-purple-primary);
+  background-color: var(--color-purple-subtle);
+  border: 1px solid rgba(89, 28, 104, 0.2);
+}
+
+.badge--success {
+  color: var(--color-green-dark);
+  background-color: var(--color-green-subtle);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.badge--info {
+  color: var(--color-blue-dark);
+  background-color: var(--color-blue-subtle);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.badge--accent {
+  color: var(--color-yellow-dark);
+  background-color: var(--color-yellow-subtle);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}

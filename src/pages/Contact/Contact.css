@@ -1,0 +1,328 @@
+/* ==========================================================================
+   NUTRI AÇAÍ — PÁGINA DE CONTATO (/contato)
+   ========================================================================== */
+
+.contact-page {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-bg-page);
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO CONTATO
+   -------------------------------------------------------------------------- */
+.contact-hero {
+  position: relative;
+  background: linear-gradient(135deg, #18051E 0%, #350C42 60%, #15031B 100%);
+  color: var(--color-white);
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: var(--space-12);
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .contact-hero {
+    padding-top: calc(var(--header-height) + var(--space-12));
+    padding-bottom: var(--space-16);
+  }
+}
+
+.contact-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-hero__badge {
+  display: inline-flex;
+  margin-bottom: var(--space-4);
+}
+
+.contact-hero__title {
+  color: var(--color-white);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 800;
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.contact-hero__slogan {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--color-yellow-light);
+  margin-bottom: var(--space-4);
+}
+
+.contact-hero__lead {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--line-height-relaxed);
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. CARDS DE CONTATO (3 CANAIS EXCLUSIVOS)
+   -------------------------------------------------------------------------- */
+.contact-channels-section {
+  padding: var(--space-10) 0 var(--space-12) 0;
+}
+
+.contact-section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-10) auto;
+}
+
+.contact-section-header h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.3rem);
+  color: var(--color-text-primary);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.contact-section-header p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .contact-channels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-channel-card {
+  background-color: var(--color-bg-surface);
+  border: 1.5px solid var(--color-border-light);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  height: 100%;
+}
+
+.contact-channel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Identidades Visuais dos 3 Canais */
+.contact-channel-card--commercial {
+  border-top: 5px solid var(--color-purple-primary);
+}
+
+.contact-channel-card--commercial:hover {
+  border-color: var(--color-purple-primary);
+}
+
+.contact-channel-card--retail {
+  border-top: 5px solid var(--color-yellow-dark);
+}
+
+.contact-channel-card--retail:hover {
+  border-color: var(--color-yellow-dark);
+}
+
+.contact-channel-card--rh {
+  border-top: 5px solid var(--color-green-primary);
+}
+
+.contact-channel-card--rh:hover {
+  border-color: var(--color-green-primary);
+}
+
+.contact-channel-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.contact-channel-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-channel-card--commercial .contact-channel-card__icon {
+  background-color: var(--color-purple-subtle);
+  color: var(--color-purple-primary);
+}
+
+.contact-channel-card--retail .contact-channel-card__icon {
+  background-color: var(--color-yellow-subtle);
+  color: var(--color-yellow-dark);
+}
+
+.contact-channel-card--rh .contact-channel-card__icon {
+  background-color: var(--color-green-subtle);
+  color: var(--color-green-primary);
+}
+
+.contact-channel-card__channel-tag {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.contact-channel-card--commercial .contact-channel-card__channel-tag {
+  background-color: var(--color-purple-subtle);
+  color: var(--color-purple-primary);
+}
+
+.contact-channel-card--retail .contact-channel-card__channel-tag {
+  background-color: var(--color-yellow-subtle);
+  color: var(--color-yellow-dark);
+}
+
+.contact-channel-card--rh .contact-channel-card__channel-tag {
+  background-color: var(--color-green-subtle);
+  color: var(--color-green-primary);
+}
+
+.contact-channel-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.contact-channel-card__purpose {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.contact-channel-card__phone-box {
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-channel-card__phone-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.contact-channel-card__phone-number {
+  font-size: var(--font-size-base);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   3. BLOCO INSTITUCIONAL DE LOCALIZAÇÃO & HORÁRIOS OFICIAIS
+   -------------------------------------------------------------------------- */
+.contact-location-section {
+  background-color: var(--color-bg-surface);
+  border-top: 1px solid var(--color-border-light);
+  padding: var(--space-12) 0;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .contact-info-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.contact-info-card {
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info-card__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.contact-address-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.contact-address-text strong {
+  color: var(--color-text-primary);
+}
+
+/* Horários Oficiais */
+.contact-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  list-style: none;
+  padding: 0;
+}
+
+.contact-hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--font-size-xs);
+}
+
+.contact-hours-day {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.contact-hours-time {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.contact-hours-time--closed {
+  color: var(--color-status-error);
+  font-weight: 700;
+}

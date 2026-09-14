@@ -1,0 +1,130 @@
+/* ==========================================================================
+   NUTRI AÇAÍ — SEÇÃO A NUTRI (APRESENTAÇÃO CURTA NA HOME)
+   ========================================================================== */
+
+.about-short {
+  background-color: var(--color-bg-surface);
+}
+
+.about-short__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-short__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+.about-short__image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-short__image-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--color-border-light);
+  background: var(--color-purple-primary);
+  max-width: 460px;
+  width: 100%;
+}
+
+.about-short__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.about-short__image-card:hover .about-short__image {
+  transform: scale(1.02);
+}
+
+.about-short__floating-badge {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  right: var(--space-4);
+  background: rgba(45, 12, 54, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-md);
+}
+
+.about-short__floating-number {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-yellow-light);
+  line-height: 1;
+}
+
+.about-short__floating-text {
+  font-size: var(--font-size-xs);
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Conteúdo Textual */
+.about-short__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-short__title {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.about-short__text {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-short__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.about-short__metric-item {
+  padding: var(--space-4);
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-purple-primary);
+}
+
+.about-short__metric-value {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-purple-primary);
+  margin-bottom: var(--space-1);
+}
+
+.about-short__metric-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

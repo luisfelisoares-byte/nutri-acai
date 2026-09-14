@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutri Açaí | Indústria Gaúcha de Açaí, Sorbets e Food Service</title>
+    <meta name="description" content="Indústria de açaí com capacidade de mais de 9 toneladas/dia em Gravataí/RS. Produção própria, frota própria e atendimento para todo o Brasil. Conheça nossos produtos!" />
+    <meta name="theme-color" content="#591C68" />
+
+    <!-- Script Inline Anti-FOUC (Prevenção de Flash de Tema Claro/Escuro) -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('nutri-acai-theme');
+          var supportDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored ? stored : (supportDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            var metaTheme = document.querySelector('meta[name="theme-color"]');
+            if (metaTheme) metaTheme.setAttribute('content', '#0F0516');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/png" href="/assets/images/logo/logo-nutri-acai.png" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nutri Açaí | Indústria Gaúcha de Açaí, Sorbets e Food Service" />
+    <meta property="og:description" content="Cremosidade que conquista. Qualidade que surpreende. Mais de 9 toneladas/dia direto da fábrica para todo o Brasil." />
+    <meta property="og:image" content="/assets/images/logo/logo-nutri-acai.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Nutri Açaí" />
+
+    <!-- Fontes Google com preconnect e display swap para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

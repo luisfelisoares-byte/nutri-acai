@@ -1,0 +1,84 @@
+﻿/* ==========================================================================
+   NUTRI AÇAÍ — BOTÃO SELETOR DE TEMA (CLARO / ESCURO)
+   Acessível (WCAG 2.1 AA), com feedback tátil e transição suave
+   ========================================================================== */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: 40px;
+  min-height: 40px;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  outline: none;
+  user-select: none;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-yellow-light);
+  outline-offset: 2px;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle__icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-normal);
+}
+
+.theme-toggle:hover .theme-toggle__icon--sun {
+  transform: rotate(45deg);
+  color: var(--color-yellow-light);
+}
+
+.theme-toggle:hover .theme-toggle__icon--moon {
+  transform: rotate(-15deg);
+  color: var(--color-yellow-light);
+}
+
+.theme-toggle__icon--sun {
+  color: var(--color-yellow-primary);
+}
+
+.theme-toggle__icon--moon {
+  color: #FFFFFF;
+}
+
+.theme-toggle__label {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Variação de estilo para dentro do MobileDrawer */
+.theme-toggle--drawer {
+  width: 100%;
+  min-height: var(--touch-target-min);
+  padding: var(--space-3) var(--space-4);
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+}
+
+.theme-toggle--drawer:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
