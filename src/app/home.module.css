@@ -1,0 +1,63 @@
+.careers { border-top: 1px solid #e9e5e9; background: #f7f5f7; }
+.careersGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.careersGrid > div { min-width: 0; }
+.careers h2 { margin-top: 16px; }
+.intro { margin-top: 24px; max-width: 480px; color: #414047; font-size: 17px; }
+.careersCard { padding: 32px; border: 1px solid #d8c6df; border-radius: 16px; background: #fff; }
+.careersCard h3 { font-size: 24px; }
+.careersCard > p { margin-top: 16px; color: #414047; }
+.unavailable { margin-top: 24px; width: 100%; border: 1px solid #d8c6df; background: #eee7f1; color: #62516a; cursor: not-allowed; white-space: normal; }
+.careersCard .status { font-size: 14px; line-height: 1.6; color: #625c66; }
+@media (max-width: 899px) { .careersGrid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+@media (max-width: 479px) { .careersCard { padding: 24px 16px; } }
+
+/* Experimento estático: estilos restritos ao hero, sem afetar as outras seções. */
+.hero { position: relative; isolation: isolate; overflow: hidden; color: #fdfcfd; background: #000; }
+.hero::before { content: ""; position: absolute; inset: auto 0 0; height: 180px; z-index: 1; pointer-events: none; background: linear-gradient(0deg, rgb(0 0 0 / 82%), rgb(0 0 0 / 72%) 60%, transparent); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgb(0 0 0 / 88%) 0%, rgb(0 0 0 / 78%) 32%, rgb(0 0 0 / 28%) 62%, rgb(0 0 0 / 12%) 100%); }
+.heroContent { position: relative; z-index: 2; min-height: 820px; display: flex; flex-direction: column; justify-content: center; padding-block: 88px 32px; }
+.heroCopy { width: min(100%, 520px); }
+.heroEyebrow { display: flex; align-items: center; gap: 12px; color: #fdfcfd; margin-bottom: 24px; }
+.heroEyebrow :global(.small-rule) { background: #bcda82; }
+.hero h1 { font-size: clamp(44px, 4.7vw, 64px); letter-spacing: -.055em; }
+.hero h1 > span { color: #bcda82; }
+.heroDescription { max-width: 400px; margin-top: 24px; font-size: 17px; line-height: 1.7; }
+.heroActions, .heroCatalogActions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.heroActions { margin-top: 28px; }
+.hero :global(.text-link) { color: #fdfcfd; }
+.hero :global(.text-link):hover { color: #bcda82; }
+.hero a:focus-visible { outline: 3px solid #bcda82; outline-offset: 5px; }
+.heroCatalog { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgb(253 252 253 / 40%); }
+.heroCatalog > p { margin-bottom: 12px; font-size: 14px; }
+.heroFootnote { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 28px; font-size: 13px; }
+.heroFootnote :global(.tiny-dot) { background: #bcda82; }
+.heroSignature { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid rgb(253 252 253 / 30%); font-size: 13px; }
+.heroSignature > span:first-child { letter-spacing: .08em; }
+.heroSignature strong { font-weight: 600; }
+@media (max-width: 1099px) {
+  .heroCopy { max-width: 460px; }
+  .hero::after { background: linear-gradient(90deg, rgb(0 0 0 / 90%) 0%, rgb(0 0 0 / 78%) 45%, rgb(0 0 0 / 20%) 100%); }
+}
+@media (max-width: 899px) {
+  .heroContent { padding-block: 28px; min-height: 0; justify-content: flex-start; }
+  .hero::before, .hero::after { display: none; }
+  .heroCopy { max-width: 560px; }
+  .hero h1 { font-size: 48px; }
+  .heroSignature { flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+}
+@media (max-width: 639px) {
+  .hero h1 { font-size: clamp(36px, 10.5vw, 44px); }
+  .heroEyebrow { font-size: 11px; margin-bottom: 20px; }
+  .heroDescription { font-size: 16px; margin-top: 20px; }
+  .heroActions { margin-top: 24px; }
+  .heroActions, .heroCatalogActions { gap: 8px 20px; }
+  .heroFootnote { gap: 8px; font-size: 12px; }
+}
+
+@media (min-width: 900px) {
+  .heroCopy { width: min(100%, 480px); }
+  .hero::before { height: 120px; background: linear-gradient(0deg, rgb(0 0 0 / 78%), rgb(0 0 0 / 28%) 55%, transparent); }
+}
+@media (min-width: 1100px) {
+  .hero::after { background: linear-gradient(90deg, rgb(0 0 0 / 90%) 0%, rgb(0 0 0 / 78%) 24%, rgb(0 0 0 / 52%) 40%, rgb(0 0 0 / 12%) 57%, transparent 72%); }
+}

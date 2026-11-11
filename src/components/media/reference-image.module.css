@@ -1,0 +1,14 @@
+.figure { margin: 0; min-width: 0; overflow: hidden; border-radius: 14px; background: #fdfcfd; color: #000; }
+.figure img { display: block; width: 100%; height: auto; object-fit: cover; }
+.figure figcaption { padding: 14px 16px; font-size: 13px; line-height: 1.5; }
+.figure figcaption span { display: block; margin-top: 6px; font-size: 12px; }
+.figure a { color: #52245f; text-decoration: underline; text-underline-offset: 3px; }
+.hero { position: absolute; inset: 0; margin: 0; pointer-events: none; }
+.hero img { object-fit: cover; object-position: center; }
+@media (max-width: 899px) {
+  .hero { position: relative; inset: auto; width: 100%; aspect-ratio: 3 / 2; }
+  .hero img { object-position: right center; }
+}
+@media (max-width: 639px) { .hero { aspect-ratio: 5 / 4; } }
+.about { border-bottom: 4px solid #bcda82; }
+.about img { aspect-ratio: auto; object-fit: contain; }

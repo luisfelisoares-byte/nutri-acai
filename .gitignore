@@ -1,37 +1,38 @@
-﻿# Logs
-logs
+node_modules/
+.next/
+out/
+
+*.tsbuildinfo
+
+.env*
+!.env.example
+
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-# Diagnostic / Dependency directories
-node_modules
-dist
-dist-ssr
-*.local
+# Documentacao principal
 
-# Editor & OS files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-Thumbs.db
-
-# Environment variables & secrets
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Temporary / Scratch artifacts
-scratch*
-*.tmp
+# Evidencias e backups mantidos apenas localmente
+docs/assets-audit/
+docs/catalogo-audit/
+docs/catalogo-integration/
+docs/final-audit-2026-10-20/
+docs/harmonization-preview/
+docs/header-fix/
+docs/header-validation-2026-10-19/
+docs/hero-background-2026-10-21/
+docs/hero-carousel-2026-10-21/
+docs/hero-carousel-refinement-2026-10-21/
+docs/hero-desktop-2026-10-22/
+docs/hero-final-2026-10-22/
+docs/hero-mobile-2026-10-21/
+docs/hero-order-2026-10-23/
+docs/images-preview/
+docs/logo-approved/
+docs/logo-preview/
+docs/logo-trial/
+docs/preview/
+docs/product-audit-2026-10-19/
+docs/products-preview/
+docs/responsive/
+docs/suppliers-preview/
+docs/visual-review/

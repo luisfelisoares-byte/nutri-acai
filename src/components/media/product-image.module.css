@@ -1,0 +1,4 @@
+.figure { margin: 0; width: 100%; aspect-ratio: 4 / 5; display: flex; flex-direction: column; background: #f3f3f4; overflow: hidden; }
+.image { position: relative; flex: 1; min-height: 0; }
+.image img { object-fit: contain; }
+.figure figcaption { padding: 8px 10px; color: #52245f; background: #fdfcfd; font-size: 11px; line-height: 1.4; text-align: center; }

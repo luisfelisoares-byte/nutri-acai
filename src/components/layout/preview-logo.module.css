@@ -1,0 +1,4 @@
+.header, .footer { display: block; width: auto; max-width: none; object-fit: contain; }
+.header { height: 72px; }
+.footer { height: 120px; }
+@media (max-width: 899px) { .header { height: 56px; } }

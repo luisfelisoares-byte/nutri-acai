@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { confirmedOrigin, canonical, sitemapPaths } from '../src/config/seo.ts';
+const original = { confirmed: process.env.SITE_DOMAIN_CONFIRMED, url: process.env.NEXT_PUBLIC_SITE_URL };
+function restore() { for (const [key, value] of [['SITE_DOMAIN_CONFIRMED', original.confirmed], ['NEXT_PUBLIC_SITE_URL', original.url]]) { if (value === undefined) delete process.env[key]; else process.env[key] = value; } }
+test('preview never derives URLs without explicit domain confirmation', () => { try { delete process.env.SITE_DOMAIN_CONFIRMED; process.env.NEXT_PUBLIC_SITE_URL = 'https://seo-fixture.invalid'; assert.equal(confirmedOrigin(), undefined); assert.equal(canonical('/produtos'), undefined); } finally { restore(); } });
+test('confirmed origin requires a value and rejects localhost/HTTP/path/credentials', () => { try { process.env.SITE_DOMAIN_CONFIRMED = 'true'; delete process.env.NEXT_PUBLIC_SITE_URL; assert.throws(confirmedOrigin); for (const value of ['http://seo-fixture.invalid', 'https://localhost', 'https://127.0.0.1', 'https://seo-fixture.invalid/path', 'https://user:secret@seo-fixture.invalid', 'https://seo-fixture.invalid/?q=1']) { process.env.NEXT_PUBLIC_SITE_URL = value; assert.throws(confirmedOrigin); } } finally { restore(); } });
+test('canonical drops filter query and sitemap includes only intended public pages', () => { try { process.env.SITE_DOMAIN_CONFIRMED = 'true'; process.env.NEXT_PUBLIC_SITE_URL = 'https://seo-fixture.invalid'; assert.deepEqual(canonical('/produtos'), { canonical: 'https://seo-fixture.invalid/produtos' }); assert.deepEqual(sitemapPaths, ['/', '/produtos']); } finally { restore(); } });
