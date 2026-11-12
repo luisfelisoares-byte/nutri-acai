@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MetaPixel } from "@/components/analytics/MetaPixel";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,5 +15,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><div className="preview-notice">Prévia para avaliação <span aria-hidden="true">·</span> Imagens e identidade visual em validação</div><Header />{children}<Footer /></body></html>;
+  return (
+    <html lang="pt-BR">
+      <body>
+        <MetaPixel />
+        <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+        <div className="preview-notice">Prévia para avaliação <span aria-hidden="true">·</span> Imagens e identidade visual em validação</div>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }
